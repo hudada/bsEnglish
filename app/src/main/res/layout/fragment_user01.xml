@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_q"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/the_space"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="8dp"
+                android:background="#44000000"
+                android:hint="请输入你要查询的词语..."
+                android:paddingLeft="12dp"
+                android:textColor="#EEFFFFFF"
+                android:textColorHint="#BBFFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_q"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#55FFFFFF"
+                android:text="查    询"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/the_space"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_yh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="英译汉"
+                android:tag="0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_hy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="汉译英"
+                android:tag="1"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_lishi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="@dimen/the_space"
+            android:layout_marginTop="@dimen/the_space"
+            android:text="#历史查询"
+            android:textColor="#CCFFFFFF"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_listls"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</RelativeLayout>

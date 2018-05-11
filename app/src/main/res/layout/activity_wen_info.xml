@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ddd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_layout" />
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/sl_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:background="#CCFFFFFF">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:hint="请输入您的评论..."
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_6"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_reply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/blue_bg"
+            android:text="回    复"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

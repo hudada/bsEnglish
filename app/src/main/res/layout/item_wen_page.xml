@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/the_space"
+        android:text="Otii is So QQQQQQQQQQQQQQQQQ!"
+        android:textColor="#DDFFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_page1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_page"
+        android:layout_margin="@dimen/the_space"
+        android:text="Otii is So QQQQQQQQQQQQQQQQQ!"
+        android:textColor="#DDFFFFFF"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ibtn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:padding="12dp"
+        android:src="@drawable/ic_volume_up_white_24dp" />
+</RelativeLayout>

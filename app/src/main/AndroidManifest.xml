@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bsproperty">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".ui.UserMainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.bsdiy.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".ui.LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.RgActivity" />
+        <activity android:name=".ui.SongDetailActivity" />
+        <activity android:name=".ui.PlayActivity" />
+        <activity android:name=".ui.SubmitActivity" />
+
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="11127432" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="1hlwwkQ4j5WkYU9oxTm4jB2f" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="1835f3b93148d7e9b580bacc17de5088" />
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+        <activity android:name=".ui.PlayInfoActivity" />
+        <activity android:name=".ui.WordInfoActivity" />
+        <activity android:name=".ui.ReadActivity" />
+        <activity android:name=".ui.QinfoActivity" />
+        <activity android:name=".ui.WenInfoActivity" />
+        <activity android:name=".ui.MyReplyActivity" />
+        <activity android:name=".ui.MyPlayActivity" />
+        <activity android:name=".ui.MyLishiActivity" />
+        <activity android:name=".ui.EditActivity" />
+        <activity android:name=".ui.StudyListActivity" />
+        <activity android:name=".ui.DownLoadActivity"></activity>
+    </application>
+
+</manifest>
